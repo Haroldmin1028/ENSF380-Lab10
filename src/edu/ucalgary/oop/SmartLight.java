@@ -2,8 +2,12 @@
 //       and the methods performAction and update.
 package edu.ucalgary.oop;
 
-class SmartLight extends SmartDevice {
-    private boolean state; //use T?
+public class SmartLight extends SmartDevice<Boolean> {
+
+    public SmartLight() {
+        setState(false);
+    }
+
     @Override
     public void update(String message) {
         switch (message) {
@@ -26,12 +30,6 @@ class SmartLight extends SmartDevice {
         }
     }
 
-    public boolean getState() {
-        return state;
-    }
 
-    public void setState(boolean state) {
-        this.state = state;
-    }
 
 }

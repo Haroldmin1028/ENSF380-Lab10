@@ -1,29 +1,24 @@
 // TODO: package, any includes, class declaration, constructor
 //       and the methods performAction and update.
 
-package edu.ucalgary.oop
+package edu.ucalgary.oop;
+
 
 public class SmartThermostat extends SmartDevice<Integer> {
-    public SmartThermostat(String name, int initialTemperature) {
-        this.name = name;
-        this.state = initialTemperature;
+
+    public SmartThermostat() {
+        setState(20);
     }
 
     @Override
     public void update(String message) {
         if ("Sleep".equals(message)) {
             setState(18);
-            System.out.println(name + " is set to 18°C. Adjusting temperature.");
+            System.out.println(message);
         } else if ("Vacation".equals(message)) {
             setState(20);
-            System.out.println(name + " is set to 20°C. Adjusting temperature.");
+            System.out.println(message);
         }
-    }
-
-    @Override
-    public void performAction(Integer newTemperature) {
-        setState(newTemperature);
-        System.out.println(name + " is set to " + newTemperature + "°C. Adjusting temperature.");
     }
 
     public void adjustTemperature(int desiredTemp) {
