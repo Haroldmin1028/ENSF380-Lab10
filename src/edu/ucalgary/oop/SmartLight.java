@@ -1,7 +1,9 @@
 // TODO: package, any includes, class declaration, constructor
 //       and the methods performAction and update.
+package edu.ucalgary.oop;
 
-
+class SmartLight extends SmartDevice {
+    private boolean state; //use T?
     @Override
     public void update(String message) {
         switch (message) {
@@ -23,4 +25,13 @@
             System.out.println("Cannot dim the light. It is currently OFF.");
         }
     }
+
+    public boolean getState() {
+        return state;
+    }
+
+    public void setState(boolean state) {
+        this.state = state;
+    }
+
 }
