@@ -13,7 +13,7 @@ public class SmartHome <T> {
             devices.add(device);
         }
 
-        return this; //devices?
+        return this;
     }
 
     // Build the SmartHome (finalizes the setup)
